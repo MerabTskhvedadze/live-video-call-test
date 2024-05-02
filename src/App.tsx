@@ -1,6 +1,6 @@
 import { ZegoUIKitPrebuilt } from '@zegocloud/zego-uikit-prebuilt';
 
-function randomID(len) {
+function randomID(len: number) {
   let result = '';
   if (result) return result;
   var chars = '12345qwertyuiopasdfgh67890jklmnbvcxzMNBVCZXASDQWERTYHGFUIOLKJP',
@@ -20,7 +20,7 @@ export function getUrlParams(url = window.location.href) {
 
 export default function App() {
   const roomID = getUrlParams().get('roomID') || randomID(5);
-  let myMeeting = async (element) => {
+  let myMeeting = async (element: any) => {
     // generate Kit Token
     const appID = 2081405561;
     const serverSecret = 'db17b9ebeffbe26dde1a5bcffa866419';
